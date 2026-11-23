@@ -1,0 +1,132 @@
+{
+  "contract_fingerprint": "2289bcb0d661bdea6dd47c7967f37aace7d3a152e18e7d2f64c08514fb73e795",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "dev.omniwrap.omniwrap.sdk:omniwrap-sdk:1.0.0",
+        "ecosystem": "Maven",
+        "entry": "dev.omniwrap.omniwrap.sdk.ApiClient",
+        "import": "import dev.omniwrap.omniwrap.sdk.ApiClient"
+      },
+      "operations": {
+        "cancelPreview": {
+          "member": "previews.cancelPreview",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/cancel",
+          "resource": "previews",
+          "signature": "suspend fun cancelPreview(params: CancelPreviewParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<CancellationReceipt>"
+        },
+        "createConfigurationRevision": {
+          "member": "configurations.createConfigurationRevision",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/configuration-revisions",
+          "resource": "configurations",
+          "signature": "suspend fun createConfigurationRevision(params: CreateConfigurationRevisionParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<ConfigurationRevision>"
+        },
+        "createPreview": {
+          "member": "previews.createPreview",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "previews",
+          "signature": "suspend fun createPreview(params: CreatePreviewParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Preview>"
+        },
+        "createSourceRevision": {
+          "member": "sources.createSourceRevision",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/source-revisions",
+          "resource": "sources",
+          "signature": "suspend fun createSourceRevision(params: CreateSourceRevisionParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<SourceRevision>"
+        },
+        "getArtifact": {
+          "member": "artifacts.getArtifact",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/artifacts/{artifactId}",
+          "resource": "artifacts",
+          "signature": "suspend fun getArtifact(params: GetArtifactParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Artifact>"
+        },
+        "getConfigurationRevision": {
+          "member": "configurations.getConfigurationRevision",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/configuration-revisions/{revisionId}",
+          "resource": "configurations",
+          "signature": "suspend fun getConfigurationRevision(params: GetConfigurationRevisionParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<ConfigurationRevision>"
+        },
+        "getEvidence": {
+          "member": "evidence.getEvidence",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/evidence/{evidenceId}",
+          "resource": "evidence",
+          "signature": "suspend fun getEvidence(params: GetEvidenceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Evidence>"
+        },
+        "getPreview": {
+          "member": "previews.getPreview",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}",
+          "resource": "previews",
+          "signature": "suspend fun getPreview(params: GetPreviewParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Preview>"
+        },
+        "getPreviewEvents": {
+          "member": "previews.getPreviewEvents",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/events",
+          "resource": "previews",
+          "signature": "fun getPreviewEvents(params: GetPreviewEventsParams, requestOptions: RequestOptions = RequestOptions(), streamOptions: StreamOptions = StreamOptions()): kotlinx.coroutines.flow.Flow<SseEvent<EventPage>>"
+        },
+        "getPreviewLogs": {
+          "member": "previews.getPreviewLogs",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/logs",
+          "resource": "previews",
+          "signature": "suspend fun getPreviewLogs(params: GetPreviewLogsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<LogPage>"
+        },
+        "getProject": {
+          "member": "projects.getProject",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}",
+          "resource": "projects",
+          "signature": "suspend fun getProject(params: GetProjectParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Project>"
+        },
+        "getSourceRevision": {
+          "member": "sources.getSourceRevision",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/source-revisions/{revisionId}",
+          "resource": "sources",
+          "signature": "suspend fun getSourceRevision(params: GetSourceRevisionParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<SourceRevision>"
+        },
+        "getUserContext": {
+          "member": "context.getUserContext",
+          "method": "GET",
+          "path": "/v1/me/context",
+          "resource": "context",
+          "signature": "suspend fun getUserContext(params: GetUserContextParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<UserContext>"
+        },
+        "listPreviewEvidence": {
+          "member": "evidence.listPreviewEvidence",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/evidence",
+          "resource": "evidence",
+          "signature": "suspend fun listPreviewEvidence(params: ListPreviewEvidenceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<EvidencePage>"
+        },
+        "listPreviews": {
+          "member": "previews.listPreviews",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "previews",
+          "signature": "suspend fun listPreviews(params: ListPreviewsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<PreviewPage>"
+        },
+        "listProjects": {
+          "member": "projects.listProjects",
+          "method": "GET",
+          "path": "/v1/projects",
+          "resource": "projects",
+          "signature": "suspend fun listProjects(params: ListProjectsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<ProjectPage>"
+        }
+      },
+      "package_directory": "../OmniWrapSdk",
+      "package_manifest": "build.gradle.kts",
+      "reference": "api.md",
+      "renderer": "kotlin"
+    }
+  ]
+}
